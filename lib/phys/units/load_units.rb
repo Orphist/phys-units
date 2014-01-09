@@ -493,7 +493,7 @@ DENSITY                 MASS / VOLUME
 LINEAR_DENSITY          MASS / LENGTH
 VISCOSITY               FORCE TIME / AREA
 KINEMATIC_VISCOSITY     VISCOSITY / DENSITY
-
+POWER                   watt
 
 #
 # units derived easily from SI units
@@ -736,8 +736,8 @@ TEMPERATURE_DIFFERENCE  kelvin
 
 tempC(x) units=[;K] x K + stdtemp ; (tempC +(-stdtemp))/K
 tempcelsius(x) units=[;K] tempC(x); ~tempC(tempcelsius)
-degcelsius              K
-degC                    K
+degcelsius              (-32 K) / 9|5 K
+degC                    (-32 K) / 9|5 K
 
 # Fahrenheit defined his temperature scale by setting 0 to the coldest
 # temperature he could produce in his lab with a salt water solution and by
@@ -753,8 +753,8 @@ degC                    K
 
 tempF(x) units=[;K] (x+(-32)) degF + stdtemp ; (tempF+(-stdtemp))/degF + 32
 tempfahrenheit(x) units=[;K] tempF(x) ; ~tempF(tempfahrenheit)
-degfahrenheit           5|9 degC
-degF                    5|9 degC
+degfahrenheit           9|5 degC + 32 degC
+degF                    9|5 degC + 32 degC
 
 
 degreesrankine          degF              # The Rankine scale has the
