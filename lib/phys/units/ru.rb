@@ -119,12 +119,32 @@ Phys::Unit.import_units <<EOL
 сек     s
 с       s
 мин     minute
+мин.    minute
 минут   minute
+минутой minute
+минута  minute
+минуты  minute
+минутами  minute
 час     hour
+час.    hour
+часа    hour
+часами  hour
+часа    hour
+часов   hour
 ч       hour
+ч.      hour
 день    day
-неделя  7 day
+днями   day
+дня     day
+дней    day
+днем    day
+дню     day
 недель  7 day
+неделя  7 day
+недели  7 day
+неделю  7 day
+неделей  7 day
+неделями  7 day
 ##
 ## Length Measures
 ##
@@ -146,6 +166,8 @@ Phys::Unit.import_units <<EOL
 МВт 1e6 watt
 ГДж 1e9 J
 ГВт 1e9 watt
+нм N m
+н*м N m
 ##
 ## Area Measures
 ##
@@ -166,8 +188,13 @@ Phys::Unit.import_units <<EOL
 ## Volume Measures
 ##
 см3          cm^3
+см^3         cm^3
 мм3          mm^3
+мм^3         mm^3
+дм3          deci-m^3
+дм^3         deci-m^3
 м3           m^3
+м^3          m^3
 метр3        m^3
 куб.см       cm^3
 куб.мм       mm^3
@@ -192,6 +219,15 @@ C   gradC
 С   gradC
 °C   gradC
 °С   gradC
+°c degC
+°с degC
+# град c
+град          gradC
+град.         gradC
+град.с        gradC
+град.с.       gradC
+град.цельсия  gradC
+градусов      gradC
 ##
 ## Electric Measures
 ##
@@ -202,5 +238,61 @@ C   gradC
 Ач    A hour
 ## Angular Measures
 ° 1|360 circle
+##
+## Other Measures
+##
+дюйм inch
+м/мин  m / min
+м/сек  m / s
+л/мин  l / min
+мл/мин  ml / min
+л/сек  l / s
+мл/сек  ml / s
+г/мин  g / min
+кол/мин  / min
+вт/м°к   w / m K
+л/с      l / s
+м/(м·°с) m / (m gradC)
+м^2·°с/вт m^2 gradC / watt
+
+н/мм^2    N / mm^2
+кг/м^2   kg / m^2
+г/м^2    g / m^2
+
+г/см^3     g / cm^3
+кг/дм^3   kg / deci-m^3
+кг/м^3    kg / m^3
+г/куб.см.  g / cm^3
+г/см3      g / cm^3
+кг/дм3    kg / (deci-m)^3
+кг/куб.дм kg / (deci-m)^3
+кг/куб.м	kg / m^3
+kg/m3     kg / m^3
+kg/m^3		kg / m^3
+кг/м3	    kg / m^3
+
+об/мин !
+тыс.об/мин 10^3 об/мин
+тыс.об./мин. 10^3 об/мин
+оборотов/м       об/мин
+уд/мин    !
+уд./мин.    уд/мин
+тыс.уд/мин  10^3 уд/мин
+тыс.уд./мин.  10^3 уд/мин
+стежков/м^2 !
+стежков/м2 стежков/м^2
+узлов/м^2 !
+узлов/м2 узлов/м^2
+циклов  !
+тыс. циклов  10^3 циклов
+усл.ед.      !
+шт           !
+штук        шт
+тыс.штук  10^3 шт
+сут !
+суток сут
+сутки сут
+сут. сут
+
 !endutf8
 EOL
