@@ -202,7 +202,8 @@ bit       !      # Basic unit of information (entropy).  The entropy in bits
                  #   to be the sum of -p(i)*log2(p(i)) over the alphabet where
                  #   p(i) is the probability that the random variable takes
                  #   on the value i.
-
+each      !
+ea        each
 ###########################################################################
 #                                                                         #
 # Prefixes (longer names must come first)                                 #
