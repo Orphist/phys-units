@@ -141,6 +141,12 @@ describe "Russian Units" do
   describe Q[1,"вт/м°к"] do
     it {should be_a_quantity_close_to Q[1,"watt/m K"] }
   end
+  describe Q[1,"Вт/м°к"] do
+    it {should be_a_quantity_close_to Q[1,"watt/m K"] }
+  end
+  describe Q[1,"Вт/м°К"] do
+    it {should be_a_quantity_close_to Q[1,"watt/m K"] }
+  end
   describe Q[1,"н/мм^2"] do
     it {should be_a_quantity_close_to Q[1,"N/mm^2"] }
   end
