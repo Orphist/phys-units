@@ -158,14 +158,18 @@ Phys::Unit.import_units <<EOL
 ##
 Дж  J
 Вт  watt
+вт  watt
 кДж 1e3 J
 кВт 1e3 watt
+квт 1e3 watt
 мДж 1e-3 J
 мВт 1e-3 watt
 МДж 1e6 J
 МВт 1e6 watt
 ГДж 1e9 J
 ГВт 1e9 watt
+Н N
+н N
 нм N m
 н*м N m
 ##
@@ -236,6 +240,7 @@ C   gradC
 ампер A
 А     A
 Ач    A hour
+мАч    10^-3 A hour
 ## Angular Measures
 ° 1|360 circle
 ##
@@ -249,15 +254,12 @@ C   gradC
 л/сек  l / s
 мл/сек  ml / s
 г/мин  g / min
-кол/мин  / min
-вт/м°к   w / m K
+м°к   m K
 л/с      l / s
-м/(м·°с) m / (m gradC)
-м^2·°с/вт m^2 gradC / watt
-
-н/мм^2    N / mm^2
-кг/м^2   kg / m^2
-г/м^2    g / m^2
+м·°с m gradC
+м·°к m K
+м^2·°с m^2 gradC
+м^2·°к m^2 K
 
 г/см^3     g / cm^3
 кг/дм^3   kg / deci-m^3
@@ -277,6 +279,7 @@ kg/m^3		kg / m^3
 тыс.об/мин 10^3 об/мин
 тыс.об./мин 10^3 об/мин
 оборотов/мин       об/мин
+тыс.об 10^3 об
 уд/мин     Hz
 уд./мин.   Hz
 шт          ea

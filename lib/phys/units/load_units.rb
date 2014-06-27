@@ -737,8 +737,8 @@ TEMPERATURE_DIFFERENCE  kelvin
 
 tempC(x) units=[;K] x K + stdtemp ; (tempC +(-stdtemp))/K
 tempcelsius(x) units=[;K] tempC(x); ~tempC(tempcelsius)
-degcelsius              (-32 K) / 9|5 K
-degC                    (-32 K) / 9|5 K
+degcelsius             K
+degC                   K
 
 # Fahrenheit defined his temperature scale by setting 0 to the coldest
 # temperature he could produce in his lab with a salt water solution and by
@@ -754,8 +754,8 @@ degC                    (-32 K) / 9|5 K
 
 tempF(x) units=[;K] (x+(-32)) degF + stdtemp ; (tempF+(-stdtemp))/degF + 32
 tempfahrenheit(x) units=[;K] tempF(x) ; ~tempF(tempfahrenheit)
-degfahrenheit           9|5 degC + 32 degC
-degF                    9|5 degC + 32 degC
+degfahrenheit           0.55555556 K #9|5 degC + 32 degC
+degF                    0.55555556 K #9|5 degC + 32 degC
 
 
 degreesrankine          degF              # The Rankine scale has the

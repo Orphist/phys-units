@@ -1,12 +1,10 @@
 # -*- coding: utf-8 -*-
 $LOAD_PATH.unshift File.dirname(__FILE__)
-require "phys/units/jp"
+require "phys/units/ru"
 require "helper"
 
-describe "Japanese Units" do
-  describe Q[1,"ноль"] do
-    it {should be_a_quantity_close_to Q[0] }
-  end
+describe "Russian Units" do
+
   describe Q[1,"один"] do
     it {should be_a_quantity_close_to Q[1] }
   end
@@ -116,15 +114,72 @@ describe "Japanese Units" do
     it {should be_a_quantity_close_to Q[900] }
   end
   describe Q[1,"тысяча"] do
-    it {should be_a_quantity_close_to Q[10^3] }
+    it {should be_a_quantity_close_to Q[1000] }
   end
   describe Q[1,"миллион"] do
-    it {should be_a_quantity_close_to Q[10^6] }
+    it {should be_a_quantity_close_to Q[1_000_000] }
   end
   describe Q[1,"миллиард"] do
-    it {should be_a_quantity_close_to Q[10^9] }
+    it {should be_a_quantity_close_to Q[1_000_000_000] }
   end
 
+  describe Q[1,"тыс.об"] do
+    it {should be_a_quantity_close_to Q[1e3,"об"] }
+  end
+  describe Q[1,"тыс.об/мин"] do
+    it {should be_a_quantity_close_to Q[1000,"об/мин"] }
+  end
+  describe Q[1000,"мАч"] do
+    it {should be_a_quantity_close_to Q[1,"Ач"] }
+  end
+  describe Q[1,"квт"] do
+    it {should be_a_quantity_close_to Q[1000,"вт"] }
+  end
+  describe Q[1,"кВт"] do
+    it {should be_a_quantity_close_to Q[1000,"вт"] }
+  end
+  describe Q[1,"вт/м°к"] do
+    it {should be_a_quantity_close_to Q[1,"watt/m K"] }
+  end
+  describe Q[1,"н/мм^2"] do
+    it {should be_a_quantity_close_to Q[1,"N/mm^2"] }
+  end
+  describe Q[1,""] do
+    it {should be_a_quantity_close_to Q[1,""] }
+  end
+  describe Q[1,""] do
+    it {should be_a_quantity_close_to Q[1,""] }
+  end
+  describe Q[1,""] do
+    it {should be_a_quantity_close_to Q[1,""] }
+  end
+  describe Q[1,""] do
+    it {should be_a_quantity_close_to Q[1,""] }
+  end
+  describe Q[1,""] do
+    it {should be_a_quantity_close_to Q[1,""] }
+  end
+  describe Q[1,""] do
+    it {should be_a_quantity_close_to Q[1,""] }
+  end
+  describe Q[1,""] do
+    it {should be_a_quantity_close_to Q[1,""] }
+  end
+  describe Q[1,""] do
+    it {should be_a_quantity_close_to Q[1,""] }
+  end
+  describe Q[1,""] do
+    it {should be_a_quantity_close_to Q[1,""] }
+  end
+  describe Q[1,""] do
+    it {should be_a_quantity_close_to Q[1,""] }
+  end
+  describe Q[1,""] do
+    it {should be_a_quantity_close_to Q[1,""] }
+  end
+  describe Q[1,""] do
+    it {should be_a_quantity_close_to Q[1,""] }
+  end
   describe Q[1,""] do
     it {should be_a_quantity_close_to Q[1,""] }
   end
