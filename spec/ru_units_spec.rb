@@ -123,6 +123,9 @@ describe "Russian Units" do
     it {should be_a_quantity_close_to Q[1_000_000_000] }
   end
 
+  describe Q[1,"об"] do
+    it {should be_a_quantity_close_to Q[1,"Hz"] }
+  end
   describe Q[1,"тыс.об"] do
     it {should be_a_quantity_close_to Q[1e3,"об"] }
   end
