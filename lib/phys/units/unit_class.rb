@@ -214,6 +214,20 @@ module Phys
         puts "#{LIST.size} units, #{PREFIX.size} prefixes" if debug
       end
 
+      def inspect
+        LIST.dup.each do |k,v|
+          if v.kind_of? Unit
+            begin
+              v.use_dimension
+            rescue
+              puts "!! no definition: #{v.inspect} !!"
+            end
+          end
+          p [k,v]
+        end
+        puts "#{LIST.size} units, #{PREFIX.size} prefixes"
+      end
+
     end
   end
 end
