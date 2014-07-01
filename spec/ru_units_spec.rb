@@ -123,14 +123,32 @@ describe "Russian Units" do
     it {should be_a_quantity_close_to Q[1_000_000_000] }
   end
 
+#   об     Hz
+#   об/мин Hz
+# тыс.об/мин 10^3 об/мин
+#   тыс.об./мин 10^3 об/мин
+#   оборотов/мин     об/мин
+#   тыс.об 10^3 об
+#   Ход    об/мин
+#   ход    об/мин
+#   тыс.ход    10^3 Hz
+#   уд/мин     60 Hz
+# уд./мин.   60 Hz
+
+  describe Q[1,"об/мин"] do
+    it {should be_a_quantity_close_to Q[1,"Ход"] }
+  end
+  describe Q[1,"об/мин"] do
+    it {should be_a_quantity_close_to Q[1,"ход"] }
+  end
   describe Q[1,"Ход"] do
-    it {should be_a_quantity_close_to Q[1,"Hz"] }
+    it {should be_a_quantity_close_to Q[1,"об/мин"] }
   end
   describe Q[1,"ход"] do
-    it {should be_a_quantity_close_to Q[1,"Hz"] }
+    it {should be_a_quantity_close_to Q[1,"об/мин"] }
   end
   describe Q[1,"тыс.ход"] do
-    it {should be_a_quantity_close_to Q[1e3,"Hz"] }
+    it {should be_a_quantity_close_to Q[1e3,"об/мин"] }
   end
   describe Q[1,"об"] do
     it {should be_a_quantity_close_to Q[1,"Hz"] }
