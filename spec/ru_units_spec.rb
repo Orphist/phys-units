@@ -163,44 +163,8 @@ describe "Russian Units" do
   describe Q[1,"н/мм^2"] do
     it {should be_a_quantity_close_to Q[1,"N/mm^2"] }
   end
-  describe Q[1,""] do
-    it {should be_a_quantity_close_to Q[1,""] }
-  end
-  describe Q[1,""] do
-    it {should be_a_quantity_close_to Q[1,""] }
-  end
-  describe Q[1,""] do
-    it {should be_a_quantity_close_to Q[1,""] }
-  end
-  describe Q[1,""] do
-    it {should be_a_quantity_close_to Q[1,""] }
-  end
-  describe Q[1,""] do
-    it {should be_a_quantity_close_to Q[1,""] }
-  end
-  describe Q[1,""] do
-    it {should be_a_quantity_close_to Q[1,""] }
-  end
-  describe Q[1,""] do
-    it {should be_a_quantity_close_to Q[1,""] }
-  end
-  describe Q[1,""] do
-    it {should be_a_quantity_close_to Q[1,""] }
-  end
-  describe Q[1,""] do
-    it {should be_a_quantity_close_to Q[1,""] }
-  end
-  describe Q[1,""] do
-    it {should be_a_quantity_close_to Q[1,""] }
-  end
-  describe Q[1,""] do
-    it {should be_a_quantity_close_to Q[1,""] }
-  end
-  describe Q[1,""] do
-    it {should be_a_quantity_close_to Q[1,""] }
-  end
-  describe Q[1,""] do
-    it {should be_a_quantity_close_to Q[1,""] }
-  end
+
+
+  puts Phys::Unit.search_uom('тыс.уд')
 
 end

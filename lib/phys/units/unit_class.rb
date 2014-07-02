@@ -228,6 +228,14 @@ module Phys
         puts "#{LIST.size} units, #{PREFIX.size} prefixes"
       end
 
+      def search_uom( uom )
+        result = []
+        LIST.dup.each do |key, value|
+          result << { unit:key, value:value.expr } if key =~ /%r[#{uom}]i.?+?/
+        end
+        result
+      end
+
     end
   end
 end
