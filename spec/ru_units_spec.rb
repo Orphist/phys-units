@@ -114,7 +114,7 @@ describe "Russian Units" do
     it {should be_a_quantity_close_to Q[900] }
   end
   describe Q[1,"тысяча"] do
-    it {should be_a_quantity_close_to Q[1000] }
+    it {should be_a_quantity_close_to Q[1e3] }
   end
   describe Q[1,"миллион"] do
     it {should be_a_quantity_close_to Q[1_000_000] }
@@ -140,16 +140,16 @@ describe "Russian Units" do
     it {should be_a_quantity_close_to Q[1e3,"об"] }
   end
   describe Q[1,"тыс.об/мин"] do
-    it {should be_a_quantity_close_to Q[1000,"об/мин"] }
+    it {should be_a_quantity_close_to Q[1e3,"об/мин"] }
   end
-  describe Q[1000,"мАч"] do
+  describe Q[1e3,"мАч"] do
     it {should be_a_quantity_close_to Q[1,"Ач"] }
   end
   describe Q[1,"квт"] do
-    it {should be_a_quantity_close_to Q[1000,"вт"] }
+    it {should be_a_quantity_close_to Q[1e3,"вт"] }
   end
   describe Q[1,"кВт"] do
-    it {should be_a_quantity_close_to Q[1000,"вт"] }
+    it {should be_a_quantity_close_to Q[1e3,"вт"] }
   end
   describe Q[1,"вт/м°к"] do
     it {should be_a_quantity_close_to Q[1,"watt/m K"] }
@@ -165,6 +165,6 @@ describe "Russian Units" do
   end
 
 
-  puts Phys::Unit.search_uom('тыс.уд')
+  puts U.search_uom('тыс.уд')
 
 end
