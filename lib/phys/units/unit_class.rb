@@ -240,6 +240,10 @@ module Phys
         LIST[uom]
       end
 
+      def complete_uoms_list
+        LIST.keys
+      end
+
     end
   end
 end
