@@ -241,7 +241,7 @@ module Phys
       end
 
       def complete_uoms_list
-        LIST.keys
+        LIST.keys.map(&:to_s)
       end
 
     end
