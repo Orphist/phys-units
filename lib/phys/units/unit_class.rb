@@ -199,7 +199,7 @@ module Phys
         }.join("|")
         @@prefix_regex = /^(#{x})(.+)$/
 
-        if false#debug
+        if debug
           LIST.dup.each do |k,v|
             if v.kind_of? Unit
               begin
@@ -210,28 +210,14 @@ module Phys
             end
             p [k,v]
           end
+          puts "#{LIST.size} units, #{PREFIX.size} prefixes"
         end
-        puts "#{LIST.size} units, #{PREFIX.size} prefixes" if debug
-      end
-
-      def inspect
-        LIST.dup.each do |k,v|
-          if v.kind_of? Unit
-            begin
-              v.use_dimension
-            rescue
-              puts "!! no definition: #{v.inspect} !!"
-            end
-          end
-          p [k,v]
-        end
-        puts "#{LIST.size} units, #{PREFIX.size} prefixes"
       end
 
       def search_uom_like( uom )
         result = []
         LIST.dup.each do |key, value|
-          result << { unit:key, value:value.expr } if key =~ /#{uom}.?+?/i
+          result << { unit: key, value: value.expr } if key =~ /#{uom}.?+?/i
         end
         result
       end
