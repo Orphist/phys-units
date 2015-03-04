@@ -199,7 +199,7 @@ module Phys
         }.join("|")
         @@prefix_regex = /^(#{x})(.+)$/
 
-        if debug
+        if false#debug
           LIST.dup.each do |k,v|
             if v.kind_of? Unit
               begin
@@ -241,7 +241,7 @@ module Phys
       end
 
       def complete_uoms_list
-        LIST.keys.map(&:to_s)
+        LIST.keys
       end
 
     end
