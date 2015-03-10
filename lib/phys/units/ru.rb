@@ -332,8 +332,4 @@ kg/m^3    кг / м^3
 !endutf8
 EOL
 
-if Phys::Unit.blank?
-  Phys::Unit.import_units data,'ru'
-else
-  puts 'Phys::Unit already loaded from gem!'
-end
+Phys::Unit.import_units data,'ru'
